@@ -7,7 +7,7 @@
         <h1>Appointment Form</h1>
         <!-- Bootstrap 5 Form -->
         <form id="createForm" method="post" action="{{ route('appointment.store') }}" onsubmit="return validateForm()">
-            @csrf <!-- CSRF Token -->
+            @csrf
             @method('post')
             <div class="mb-3">
                 <label for="service_name" class="form-label">Service Name:</label>
@@ -32,7 +32,6 @@
                 <div id="serviceTypeError" class="error"></div>
             </div>
 
-            <!-- Office Dropdown -->
             <div class="mb-3">
                 <label for="office" class="form-label">Office:</label>
                 <br>
@@ -42,7 +41,6 @@
                 </select>
                 <div id="officeError" class="error"></div>
             </div>
-            <!-- Input Button -->
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
